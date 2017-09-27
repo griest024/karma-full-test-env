@@ -5,4 +5,5 @@ RUN apt-get update && apt-get install -y curl apt-transport-https && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install -y yarn
     
-ENV FORCE_COLOR=true # helps nodejs to display colors
+# helps nodejs to display colors
+ENV FORCE_COLOR=true
