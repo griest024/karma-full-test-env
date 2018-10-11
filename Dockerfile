@@ -1,5 +1,7 @@
 FROM markadams/chromium-xvfb
 
+RUN apt update && apt install -y gpg
+
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt update && apt install -y node apt-transport-https openssh-client git && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
